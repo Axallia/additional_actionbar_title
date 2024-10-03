@@ -24,7 +24,7 @@ out vec2 texCoord0;
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
-    int guiScale = (round(ScreenSize.x * ProjMat[0][0] / 2));
+    float guiScale = (round(ScreenSize.x * ProjMat[0][0] / 2));
 
     // blue is currently unused; may use it later.
     ivec3 iColor = ivec3(Color.rgb * 255.0);
